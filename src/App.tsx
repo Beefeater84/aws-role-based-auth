@@ -19,8 +19,8 @@ export default function App() {
             <Suspense fallback={<>Loading ..</>}>
                 <Routes>
                     <Route path="/" element={<Main/>}/>
-                    <Route path="/about" element={<About/>}/>
                     <Route path="/blue-team" element={<BlueTeam/>}/>
+                    <Route path="/about" element={<About/>}/>
                     <Route path="/red-team" element={<RedTeam/>}/>
                     <Route path="*" element={<Error/>}/>
                 </Routes>

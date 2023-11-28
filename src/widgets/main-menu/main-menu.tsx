@@ -8,14 +8,13 @@ export default function MainMenu(){
             url: '/'
         },
         {
-            label: 'Blue Team',
-            url: '/blue-team'
-        },
-        {
             label: 'Red Team',
             url: '/red-team'
         },
-
+        {
+            label: 'Blue Team',
+            url: '/blue-team'
+        },
         {
             label: 'About',
             url: '/about'
