@@ -16,5 +16,23 @@
         "rolebasedauthaf364ff3": {}
       }
     }
+  },
+  "prod": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-rolebasedauth-prod-201618-authRole",
+      "UnauthRoleArn": "arn:aws:iam::254180359618:role/amplify-rolebasedauth-prod-201618-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::254180359618:role/amplify-rolebasedauth-prod-201618-authRole",
+      "Region": "eu-north-1",
+      "DeploymentBucketName": "amplify-rolebasedauth-prod-201618-deployment",
+      "UnauthRoleName": "amplify-rolebasedauth-prod-201618-unauthRole",
+      "StackName": "amplify-rolebasedauth-prod-201618",
+      "StackId": "arn:aws:cloudformation:eu-north-1:254180359618:stack/amplify-rolebasedauth-prod-201618/3947e150-8e1a-11ee-a59d-062bf889427a",
+      "AmplifyAppId": "d3mt2c5p6xawrh"
+    },
+    "categories": {
+      "auth": {
+        "rolebasedauthaf364ff3": {}
+      }
+    }
   }
 }
