@@ -17,7 +17,7 @@ export default function App() {
     return (
         <div className="container">
             <MainMenu />
-            <Suspense fallback={<>Loading ...</>}>
+            <Suspense fallback={<>Loading ..</>}>
                 <Routes>
                     <Route path="/" element={<Main/>}/>
                     <Route path="/about" element={<About/>}/>
