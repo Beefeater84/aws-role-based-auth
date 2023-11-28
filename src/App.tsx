@@ -2,13 +2,14 @@ import {Route, Routes} from "react-router-dom";
 import {lazy, Suspense} from "react";
 import "./applications/styles/global.css";
 import MainMenu from "./widgets/main-menu/main-menu";
-import BlueTeam from "./pages/blue-team";
+
 
 
 const Main = lazy(() => import('./pages/main/main'));
 const About = lazy(() => import('./pages/about/about'));
 const Error = lazy(() => import('./pages/404/error'));
 const RedTeam = lazy(() => import('./pages/red-team'));
+const BlueTeam = lazy(() => import('./pages/blue-team'));
 
 
 export default function App() {

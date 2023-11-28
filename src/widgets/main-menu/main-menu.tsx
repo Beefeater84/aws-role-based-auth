@@ -18,7 +18,11 @@ export default function MainMenu(){
         {
             label: 'About',
             url: '/about'
-        }
+        },
+        {
+            label: 'Dont exist',
+            url: '/noooooo'
+        },
     ]
 
     return (
