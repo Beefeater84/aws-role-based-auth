@@ -1,5 +1,6 @@
 {
   "compilerOptions": {
+    "baseUrl": ".",
     "outDir": "./dist/",
     "noImplicitAny": true,
     "module": "es2020",
@@ -11,7 +12,10 @@
     "strict": true,
     "skipLibCheck": true,
     "allowSyntheticDefaultImports": true,
-    "esModuleInterop": true
+    "esModuleInterop": true,
+    "paths": {
+      "@/*": ["src/*"],
+    }
   },
   "ts-node": {
     "compilerOptions": {
