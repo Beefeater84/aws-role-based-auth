@@ -3,6 +3,11 @@ import {BrowserRouter} from "react-router-dom";
 import App from "./App";
 import {PrimeReactProvider} from 'primereact/api';
 import "primereact/resources/themes/lara-light-cyan/theme.css";
+import {Authenticator} from '@aws-amplify/ui-react';
+
+import { Amplify } from 'aws-amplify';
+import amplifyconfig from './amplifyconfiguration.json';
+Amplify.configure(amplifyconfig);
 
 // Clear the existing HTML content
 document.body.innerHTML = '<div id="root"></div>';
@@ -13,9 +18,11 @@ if (!!rootNode) {
     const root = createRoot(rootNode);
     root.render(
         <PrimeReactProvider>
-            <BrowserRouter>
-                <App/>
-            </BrowserRouter>
+            <Authenticator.Provider>
+                <BrowserRouter>
+                    <App/>
+                </BrowserRouter>
+            </Authenticator.Provider>
         </PrimeReactProvider>
     );
 }

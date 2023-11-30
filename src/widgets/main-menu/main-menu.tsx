@@ -1,26 +1,30 @@
 import {TabMenu} from "primereact/tabmenu";
 import {MenuItem} from "primereact/menuitem";
+import {useMemo} from "react";
 
-export default function MainMenu(){
-    const items: MenuItem[] = [
+export default function MainMenu() {
+    const items: MenuItem[] = useMemo(() => [
         {
             label: 'Main',
             url: '/'
+        },
+        {
+            label: 'Red Team',
+            url: '/red-team'
         },
         {
             label: 'Blue Team',
             url: '/blue-team'
         },
         {
-            label: 'Red Team',
-            url: '/red-team'
-        },
-
-        {
             label: 'About',
             url: '/about'
-        }
-    ]
+        },
+        {
+            label: 'Login',
+            url: '/login'
+        },
+    ], [])
 
     return (
         <TabMenu model={items}/>

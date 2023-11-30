@@ -1,6 +1,6 @@
 {
   "identityPoolName": "rolebasedauthaf364ff3_identitypool_af364ff3",
-  "allowUnauthenticatedIdentities": false,
+  "allowUnauthenticatedIdentities": true,
   "resourceNameTruncated": "rolebaaf364ff3",
   "userPoolName": "rolebasedauthaf364ff3_userpool_af364ff3",
   "autoVerifiedAttributes": [
@@ -34,7 +34,7 @@
   "sharedId": "af364ff3",
   "resourceName": "rolebasedauthaf364ff3",
   "authSelections": "identityPoolAndUserPool",
-  "useDefault": "default",
+  "useDefault": "manual",
   "usernameAttributes": [
     "email"
   ],
@@ -55,5 +55,19 @@
     ]
   },
   "breakCircularDependency": true,
-  "dependsOn": []
+  "dependsOn": [],
+  "thirdPartyAuth": false,
+  "userPoolGroups": false,
+  "adminQueries": false,
+  "triggers": "{}",
+  "hostedUI": true,
+  "hostedUIDomainName": "rolebasedauth402d582c-402d582c",
+  "authProvidersUserPool": [],
+  "hostedUIProviderMeta": "[]",
+  "oAuthMetadata": "{\"AllowedOAuthFlows\":[\"code\"],\"AllowedOAuthScopes\":[\"phone\",\"email\",\"openid\",\"profile\",\"aws.cognito.signin.user.admin\"],\"CallbackURLs\":[\"https://dev.d3mt2c5p6xawrh.amplifyapp.com/\"],\"LogoutURLs\":[\"https://dev.d3mt2c5p6xawrh.amplifyapp.com/login/\"]}",
+  "authProviders": [],
+  "parentStack": {
+    "Ref": "AWS::StackId"
+  },
+  "permissions": []
 }

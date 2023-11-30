@@ -24,6 +24,6 @@ export default function buildWebpackConfig(options: BuildOption): Configuration 
         module: {
             rules: buildRules(options),
         },
-        resolve: buildResolvers()
+        resolve: buildResolvers(options)
     }
 }

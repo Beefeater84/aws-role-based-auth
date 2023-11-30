@@ -6,6 +6,7 @@ export interface BuildPaths {
     build: string;
     htmlTemplate: string;
     devServer: string;
+    projectRoot: string;
 
 }
 

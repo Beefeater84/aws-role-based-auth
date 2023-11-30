@@ -7,7 +7,8 @@ const paths: BuildPaths = {
     entry: path.resolve(__dirname, 'src', 'index'),
     build: path.resolve(__dirname, 'build'),
     htmlTemplate: path.resolve(__dirname, "public", "index.html"),
-    devServer: path.resolve(__dirname, "build")
+    devServer: path.resolve(__dirname, "build"),
+    projectRoot: path.resolve(__dirname),
 }
 
 export default function(env: BuildEnv): webpack.Configuration {
