@@ -1,8 +1,10 @@
 import {Route, Routes} from "react-router-dom";
 import {lazy, Suspense} from "react";
 import "./applications/styles/global.css";
-import MainMenu from "./widgets/main-menu/main-menu";
 
+import LazyRoutes from "@/applications/providers/Router/LazyRoutes";
+import MainMenu from "@/widgets/main-menu/main-menu";
+import RequireAuth from "@/applications/providers/Authenticator/RequireAuth";
 
 
 const Main = lazy(() => import('./pages/main/main'));
@@ -16,16 +18,18 @@ export default function App() {
 
     return (
         <div className="container">
-            <MainMenu />
-            <Suspense fallback={<>Loading ..</>}>
-                <Routes>
+            <MainMenu/>
+            <Routes>
+                <Route element={<LazyRoutes/>}>
                     <Route path="/" element={<Main/>}/>
-                    <Route path="/blue-team" element={<BlueTeam/>}/>
+                    <Route element={<RequireAuth/>}>
+                        <Route path="/blue-team" element={<BlueTeam/>}/>
+                        <Route path="/red-team" element={<RedTeam/>}/>
+                    </Route>
                     <Route path="/about" element={<About/>}/>
-                    <Route path="/red-team" element={<RedTeam/>}/>
                     <Route path="*" element={<Error/>}/>
-                </Routes>
-            </Suspense>
+                </Route>
+            </Routes>
         </div>
     )
 }
