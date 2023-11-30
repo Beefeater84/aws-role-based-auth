@@ -1,6 +1,7 @@
 import {Route, Routes} from "react-router-dom";
-import {lazy, Suspense} from "react";
+import {lazy} from "react";
 import "./applications/styles/global.css";
+import '@aws-amplify/ui-react/styles.css';
 
 import LazyRoutes from "@/applications/providers/Router/LazyRoutes";
 import MainMenu from "@/widgets/main-menu/main-menu";
@@ -12,6 +13,7 @@ const About = lazy(() => import('./pages/about/about'));
 const Error = lazy(() => import('./pages/404/error'));
 const RedTeam = lazy(() => import('./pages/red-team'));
 const BlueTeam = lazy(() => import('./pages/blue-team'));
+const Login = lazy(() => import('@/pages/login'));
 
 
 export default function App() {
@@ -27,6 +29,7 @@ export default function App() {
                         <Route path="/red-team" element={<RedTeam/>}/>
                     </Route>
                     <Route path="/about" element={<About/>}/>
+                    <Route path="/login" element={<Login/>}/>
                     <Route path="*" element={<Error/>}/>
                 </Route>
             </Routes>

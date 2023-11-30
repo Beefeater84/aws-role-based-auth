@@ -21,8 +21,8 @@ export default function MainMenu() {
             url: '/about'
         },
         {
-            label: 'Dont exist',
-            url: '/noooooo'
+            label: 'Login',
+            url: '/login'
         },
     ], [])
 

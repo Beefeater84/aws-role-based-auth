@@ -12,7 +12,7 @@ export default function RequireAuth() {
         return <>Loading...</>;
     }
 
-    if (authStatus === "unauthenticated") navigate("/");
+    if (authStatus === "unauthenticated") navigate("/login");
 
     return (
         <UserContextProvider>
