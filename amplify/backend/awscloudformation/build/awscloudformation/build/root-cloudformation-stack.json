@@ -155,10 +155,10 @@
     "authrolebasedauthaf364ff3": {
       "Type": "AWS::CloudFormation::Stack",
       "Properties": {
-        "TemplateURL": "https://s3.amazonaws.com/amplify-rolebasedauth-prod-201618-deployment/amplify-cfn-templates/auth/rolebasedauthaf364ff3-cloudformation-template.json",
+        "TemplateURL": "https://s3.amazonaws.com/amplify-rolebasedauth-dev-182223-deployment/amplify-cfn-templates/auth/rolebasedauthaf364ff3-cloudformation-template.json",
         "Parameters": {
           "identityPoolName": "rolebasedauthaf364ff3_identitypool_af364ff3",
-          "allowUnauthenticatedIdentities": false,
+          "allowUnauthenticatedIdentities": true,
           "resourceNameTruncated": "rolebaaf364ff3",
           "userPoolName": "rolebasedauthaf364ff3_userpool_af364ff3",
           "autoVerifiedAttributes": "email",
@@ -182,7 +182,7 @@
           "sharedId": "af364ff3",
           "resourceName": "rolebasedauthaf364ff3",
           "authSelections": "identityPoolAndUserPool",
-          "useDefault": "default",
+          "useDefault": "manual",
           "usernameAttributes": "email",
           "userPoolGroupList": "",
           "serviceName": "Cognito",
@@ -202,7 +202,22 @@
           },
           "breakCircularDependency": true,
           "dependsOn": "",
-          "env": "prod"
+          "thirdPartyAuth": false,
+          "userPoolGroups": false,
+          "adminQueries": false,
+          "triggers": "{}",
+          "hostedUI": true,
+          "hostedUIDomainName": "rolebasedauth402d582c-402d582c",
+          "authProvidersUserPool": "",
+          "hostedUIProviderMeta": "[]",
+          "oAuthMetadata": "{\"AllowedOAuthFlows\":[\"code\"],\"AllowedOAuthScopes\":[\"phone\",\"email\",\"openid\",\"profile\",\"aws.cognito.signin.user.admin\"],\"CallbackURLs\":[\"https://dev.d3mt2c5p6xawrh.amplifyapp.com/\"],\"LogoutURLs\":[\"https://dev.d3mt2c5p6xawrh.amplifyapp.com/login/\"]}",
+          "authProviders": "",
+          "parentStack": {
+            "Ref": "AWS::StackId"
+          },
+          "permissions": "",
+          "hostedUIProviderCreds": "[]",
+          "env": "dev"
         }
       }
     },

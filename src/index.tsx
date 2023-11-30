@@ -5,6 +5,10 @@ import {PrimeReactProvider} from 'primereact/api';
 import "primereact/resources/themes/lara-light-cyan/theme.css";
 import {Authenticator} from '@aws-amplify/ui-react';
 
+import { Amplify } from 'aws-amplify';
+import amplifyconfig from './amplifyconfiguration.json';
+Amplify.configure(amplifyconfig);
+
 // Clear the existing HTML content
 document.body.innerHTML = '<div id="root"></div>';
 const rootNode = document.getElementById('root');
