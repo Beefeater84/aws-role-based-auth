@@ -155,7 +155,7 @@
     "authrolebasedauthaf364ff3": {
       "Type": "AWS::CloudFormation::Stack",
       "Properties": {
-        "TemplateURL": "https://s3.amazonaws.com/amplify-rolebasedauth-dev-182223-deployment/amplify-cfn-templates/auth/rolebasedauthaf364ff3-cloudformation-template.json",
+        "TemplateURL": "https://s3.amazonaws.com/amplify-rolebasedauth-prod-201618-deployment/amplify-cfn-templates/auth/rolebasedauthaf364ff3-cloudformation-template.json",
         "Parameters": {
           "identityPoolName": "rolebasedauthaf364ff3_identitypool_af364ff3",
           "allowUnauthenticatedIdentities": true,
@@ -217,40 +217,7 @@
           },
           "permissions": "",
           "hostedUIProviderCreds": "[]",
-          "env": "dev"
-        }
-      }
-    },
-    "storages3roleBasedAuth": {
-      "Type": "AWS::CloudFormation::Stack",
-      "Properties": {
-        "TemplateURL": "https://s3.amazonaws.com/amplify-rolebasedauth-dev-182223-deployment/amplify-cfn-templates/storage/cloudformation-template.json",
-        "Parameters": {
-          "bucketName": "rolebasedauths3shared",
-          "selectedGuestPermissions": "s3:GetObject,s3:ListBucket",
-          "selectedAuthenticatedPermissions": "s3:GetObject,s3:ListBucket",
-          "unauthRoleName": {
-            "Ref": "UnauthRoleName"
-          },
-          "authRoleName": {
-            "Ref": "AuthRoleName"
-          },
-          "s3PrivatePolicy": "Private_policy_9dd16f7d",
-          "s3ProtectedPolicy": "Protected_policy_9dd16f7d",
-          "s3PublicPolicy": "Public_policy_9dd16f7d",
-          "s3ReadPolicy": "read_policy_9dd16f7d",
-          "s3UploadsPolicy": "Uploads_policy_9dd16f7d",
-          "authPolicyName": "s3_amplify_9dd16f7d",
-          "unauthPolicyName": "s3_amplify_9dd16f7d",
-          "AuthenticatedAllowList": "ALLOW",
-          "GuestAllowList": "ALLOW",
-          "s3PermissionsAuthenticatedPrivate": "s3:GetObject",
-          "s3PermissionsAuthenticatedProtected": "s3:GetObject",
-          "s3PermissionsAuthenticatedPublic": "s3:GetObject",
-          "s3PermissionsAuthenticatedUploads": "DISALLOW",
-          "s3PermissionsGuestPublic": "s3:GetObject",
-          "s3PermissionsGuestUploads": "DISALLOW",
-          "env": "dev"
+          "env": "prod"
         }
       }
     },
