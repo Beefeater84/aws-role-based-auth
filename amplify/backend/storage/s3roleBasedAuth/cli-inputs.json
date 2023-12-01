@@ -1,0 +1,13 @@
+{
+  "resourceName": "s3roleBasedAuth",
+  "policyUUID": "9dd16f7d",
+  "bucketName": "rolebasedauths3shared",
+  "storageAccess": "authAndGuest",
+  "guestAccess": [
+    "READ"
+  ],
+  "authAccess": [
+    "READ"
+  ],
+  "groupAccess": {}
+}
