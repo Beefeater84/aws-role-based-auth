@@ -1,4 +1,11 @@
 export type AmplifyDependentResourcesAttributes = {
+  "api": {
+    "rolebasedauth": {
+      "GraphQLAPIEndpointOutput": "string",
+      "GraphQLAPIIdOutput": "string",
+      "GraphQLAPIKeyOutput": "string"
+    }
+  },
   "auth": {
     "rolebasedauthaf364ff3": {
       "AppClientID": "string",
@@ -13,6 +20,14 @@ export type AmplifyDependentResourcesAttributes = {
     }
   },
   "storage": {
+    "RoleBasedOrganisations": {
+      "Arn": "string",
+      "Name": "string",
+      "PartitionKeyName": "string",
+      "PartitionKeyType": "string",
+      "Region": "string",
+      "StreamArn": "string"
+    },
     "s3roleBasedAuth": {
       "BucketName": "string",
       "Region": "string"

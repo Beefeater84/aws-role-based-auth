@@ -1,4 +1,22 @@
 {
+  "api": {
+    "rolebasedauth": {
+      "dependsOn": [],
+      "output": {
+        "authConfig": {
+          "additionalAuthenticationProviders": [],
+          "defaultAuthentication": {
+            "apiKeyConfig": {
+              "apiKeyExpirationDays": 7
+            },
+            "authenticationType": "API_KEY"
+          }
+        }
+      },
+      "providerPlugin": "awscloudformation",
+      "service": "AppSync"
+    }
+  },
   "auth": {
     "rolebasedauthaf364ff3": {
       "customAuth": false,
@@ -27,7 +45,138 @@
       "service": "Cognito"
     }
   },
+  "function": {},
+  "parameters": {
+    "AMPLIFY_storage_RoleBasedAuthPermissions_arn": {
+      "usedBy": [
+        {
+          "category": "storage",
+          "resourceName": "RoleBasedAuthPermissions"
+        }
+      ]
+    },
+    "AMPLIFY_storage_RoleBasedAuthPermissions_partitionKeyName": {
+      "usedBy": [
+        {
+          "category": "storage",
+          "resourceName": "RoleBasedAuthPermissions"
+        }
+      ]
+    },
+    "AMPLIFY_storage_RoleBasedAuthPermissions_partitionKeyType": {
+      "usedBy": [
+        {
+          "category": "storage",
+          "resourceName": "RoleBasedAuthPermissions"
+        }
+      ]
+    },
+    "AMPLIFY_storage_RoleBasedAuthPermissions_region": {
+      "usedBy": [
+        {
+          "category": "storage",
+          "resourceName": "RoleBasedAuthPermissions"
+        }
+      ]
+    },
+    "AMPLIFY_storage_RoleBasedAuthPermissions_sortKeyName": {
+      "usedBy": [
+        {
+          "category": "storage",
+          "resourceName": "RoleBasedAuthPermissions"
+        }
+      ]
+    },
+    "AMPLIFY_storage_RoleBasedAuthPermissions_sortKeyType": {
+      "usedBy": [
+        {
+          "category": "storage",
+          "resourceName": "RoleBasedAuthPermissions"
+        }
+      ]
+    },
+    "AMPLIFY_storage_RoleBasedAuthPermissions_tableName": {
+      "usedBy": [
+        {
+          "category": "storage",
+          "resourceName": "RoleBasedAuthPermissions"
+        }
+      ]
+    },
+    "AMPLIFY_storage_RoleBasedAuthRoles_arn": {
+      "usedBy": [
+        {
+          "category": "storage",
+          "resourceName": "RoleBasedAuthRoles"
+        }
+      ]
+    },
+    "AMPLIFY_storage_RoleBasedAuthRoles_partitionKeyName": {
+      "usedBy": [
+        {
+          "category": "storage",
+          "resourceName": "RoleBasedAuthRoles"
+        }
+      ]
+    },
+    "AMPLIFY_storage_RoleBasedAuthRoles_partitionKeyType": {
+      "usedBy": [
+        {
+          "category": "storage",
+          "resourceName": "RoleBasedAuthRoles"
+        }
+      ]
+    },
+    "AMPLIFY_storage_RoleBasedAuthRoles_region": {
+      "usedBy": [
+        {
+          "category": "storage",
+          "resourceName": "RoleBasedAuthRoles"
+        }
+      ]
+    },
+    "AMPLIFY_storage_RoleBasedAuthRoles_sortKeyName": {
+      "usedBy": [
+        {
+          "category": "storage",
+          "resourceName": "RoleBasedAuthRoles"
+        }
+      ]
+    },
+    "AMPLIFY_storage_RoleBasedAuthRoles_sortKeyType": {
+      "usedBy": [
+        {
+          "category": "storage",
+          "resourceName": "RoleBasedAuthRoles"
+        }
+      ]
+    },
+    "AMPLIFY_storage_RoleBasedAuthRoles_tableName": {
+      "usedBy": [
+        {
+          "category": "storage",
+          "resourceName": "RoleBasedAuthRoles"
+        }
+      ]
+    }
+  },
   "storage": {
+    "RoleBasedAuthPermissions": {
+      "dependsOn": [],
+      "providerPlugin": "awscloudformation",
+      "service": "DynamoDB",
+      "serviceType": "imported"
+    },
+    "RoleBasedAuthRoles": {
+      "dependsOn": [],
+      "providerPlugin": "awscloudformation",
+      "service": "DynamoDB",
+      "serviceType": "imported"
+    },
+    "RoleBasedOrganisations": {
+      "providerPlugin": "awscloudformation",
+      "service": "DynamoDB"
+    },
     "s3roleBasedAuth": {
       "dependsOn": [],
       "providerPlugin": "awscloudformation",

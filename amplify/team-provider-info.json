@@ -16,7 +16,29 @@
         "rolebasedauthaf364ff3": {}
       },
       "storage": {
-        "s3roleBasedAuth": {}
+        "s3roleBasedAuth": {},
+        "RoleBasedOrganisations": {},
+        "RoleBasedAuthPermissions": {
+          "tableName": "RoleBasedAuthPermissions",
+          "region": "eu-north-1",
+          "arn": "arn:aws:dynamodb:eu-north-1:254180359618:table/RoleBasedAuthPermissions",
+          "partitionKeyName": "code",
+          "partitionKeyType": "S",
+          "sortKeyName": "group",
+          "sortKeyType": "S"
+        },
+        "RoleBasedAuthRoles": {
+          "tableName": "RoleBasedAuthRoles",
+          "region": "eu-north-1",
+          "arn": "arn:aws:dynamodb:eu-north-1:254180359618:table/RoleBasedAuthRoles",
+          "partitionKeyName": "organisation",
+          "partitionKeyType": "S",
+          "sortKeyName": "title",
+          "sortKeyType": "S"
+        }
+      },
+      "api": {
+        "rolebasedauth": {}
       }
     }
   },

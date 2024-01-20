@@ -1,3 +1,6 @@
+#----------------------------------------
+.idea
+
 #amplify-do-not-edit-begin
 amplify/\#current-cloud-backend
 amplify/.config/local-*
@@ -6,8 +9,7 @@ amplify/mock-data
 amplify/mock-api-resources
 amplify/backend/amplify-meta.json
 amplify/backend/.temp
-amplify/**/build/
-/build/
+build/
 dist/
 node_modules/
 aws-exports.js
@@ -20,6 +22,3 @@ amplifytools.xcconfig
 .secret-*
 **.sample
 #amplify-do-not-edit-end
-
-#----------------------------------------
-.idea

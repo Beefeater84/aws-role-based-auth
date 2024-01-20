@@ -254,6 +254,32 @@
         }
       }
     },
+    "storageRoleBasedOrganisations": {
+      "Type": "AWS::CloudFormation::Stack",
+      "Properties": {
+        "TemplateURL": "https://s3.amazonaws.com/amplify-rolebasedauth-dev-182223-deployment/amplify-cfn-templates/storage/RoleBasedOrganisations-cloudformation-template.json",
+        "Parameters": {
+          "tableName": "RoleBasedOrganisations",
+          "partitionKeyName": "name",
+          "partitionKeyType": "S",
+          "env": "dev"
+        }
+      }
+    },
+    "apirolebasedauth": {
+      "Type": "AWS::CloudFormation::Stack",
+      "Properties": {
+        "TemplateURL": "https://s3.amazonaws.com/amplify-rolebasedauth-dev-182223-deployment/amplify-cfn-templates/api/cloudformation-template.json",
+        "Parameters": {
+          "AppSyncApiName": "rolebasedauth",
+          "DynamoDBBillingMode": "PAY_PER_REQUEST",
+          "DynamoDBEnableServerSideEncryption": false,
+          "S3DeploymentBucket": "amplify-rolebasedauth-dev-182223-deployment",
+          "S3DeploymentRootKey": "amplify-appsync-files/c35fbabedde548485484cca4c45cd3f11368c4cc",
+          "env": "dev"
+        }
+      }
+    },
     "UpdateRolesWithIDPFunction": {
       "DependsOn": [
         "AuthRole",
